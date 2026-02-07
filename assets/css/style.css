@@ -177,6 +177,7 @@ video {
   overflow: hidden;
   background-color: #000;
   cursor: pointer;
+  height: 100vh;
 }
 
 .column-branding {
@@ -195,22 +196,25 @@ video {
   position: absolute;
   inset: 0;
   z-index: 1;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.column-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .column-archive .column-slide {
-  position: absolute;
-  inset: 0;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 
 .column-archive .column-slide.active {
   opacity: 1;
-}
-
-.column-archive:hover .column-slide.active {
-  opacity: 1;
-  filter: invert(1);
 }
 
 /* Video se muestra al reproducirse */
@@ -230,9 +234,15 @@ video {
 .column-image,
 .column-video {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
+  transition: filter 0.4s ease;
+}
+
+.column:hover .column-image,
+.column:hover .column-video {
+  filter: invert(1);
 }
 
 .column-text {
@@ -480,6 +490,8 @@ video {
 
 .project-slideshow .slide.active {
   opacity: 1;
+  min-height: 100%;
+  height: 100%;
 }
 
 .project-card-image {
@@ -1117,14 +1129,31 @@ video {
 
   .column {
     min-height: 33.333vh;
+    height: auto;
+  }
+
+  .column-bg {
+    height: 100%;
   }
 
   .column-slide {
     opacity: 0;
+    height: 100%;
   }
 
   .column-slide.active {
     opacity: 1;
+  }
+
+  .column-image,
+  .column-video {
+    height: 100%;
+  }
+
+  /* Desactivar hover en móvil */
+  .column:hover .column-image,
+  .column:hover .column-video {
+    filter: none;
   }
 
   .column-text {
