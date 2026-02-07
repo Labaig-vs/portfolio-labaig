@@ -211,7 +211,7 @@ video {
 
 .column:hover .column-slide.active {
   opacity: 1;
-  filter: brightness(1.3);
+  filter: invert(1);
 }
 
 .column-image,
