@@ -1,31 +1,187 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
-    <link rel="icon" href="../../../assets/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../../../assets/css/style.css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="nav-container">
-        <a href="../../../" class="nav-link nav-logo">LABAIG</a>
-        <div class="nav-right">
-          <a href="../../about.html" class="nav-link">ABOUT</a>
-          <a href="../../contact.html" class="nav-link">CONTACT</a>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos de branding - Portfolio de Javier Labaig" />
+  <title>Labaig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+  <link rel="icon" href="../../../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="../../../index.html" class="nav-link nav-logo">LABAIG</a>
+      <div class="nav-right">
+        <a href="../../../pages/about.html" class="nav-link">ABOUT</a>
+        <a href="../../../pages/contact.html" class="nav-link">CONTACT</a>
       </div>
-    </main>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+    </nav>
+  </header>
 
-    <script src="../../../assets/js/main.js" defer></script>
-  </body>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <a href="../../../index.html" class="nav-link">HOME</a>
+      <a href="../../../pages/about.html" class="nav-link">ABOUT</a>
+      <a href="../../../pages/contact.html" class="nav-link">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="projects-main">
+    <!-- Project Header and Intro Container -->
+    <div class="project-header-intro">
+      <!-- Project Header -->
+      <div class="project-header">
+        <h1 class="project-title">ZEST</h1>
+      </div>
+
+      <!-- Project Intro -->
+      <div class="project-intro">
+        <p class="project-text">
+          Identidad visual y branding para ZEST, un festival gastronómico anual que explora los ingredientes desde todos
+          los usos que le han dado las diferentes culturas. Además, publican un anuario con recetas y artículos
+          relacionados con la exploración del ingrediente de cada edición. En colaboración con Ana Díaz y Walter López.
+        </p>
+      </div>
+    </div>
+
+    <!-- Projects Grid (2 columnas) -->
+    <div class="projects-grid projects-grid--two">
+
+      <!-- Imagen 14: logotipo -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/logo1.webp", "alt":"ZEST - Logotipo"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/logo1.webp" alt="ZEST - Logotipo" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      
+      <!-- Imagen 14: mupi3 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/mupi3.webp", "alt":"ZEST - Mupi 3"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/mupi3.webp" alt="ZEST - Mupi 3" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 1: book1 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/book1.webp", "alt":"ZEST - Book 1"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/book1.webp" alt="ZEST - Book 1" class="project-card-image"
+          loading="eager" />
+      </div>
+
+      <!-- Imagen 2: book2 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/book2.webp", "alt":"ZEST - Book 2"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/book2.webp" alt="ZEST - Book 2" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 3: cup -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/cup.webp", "alt":"ZEST - Cup"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/cup.webp" alt="ZEST - Cup" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 4: cup1 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/cup1.webp", "alt":"ZEST - Cup 1"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/cup1.webp" alt="ZEST - Cup 1" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 7: mupi -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/mupi.webp", "alt":"ZEST - Mupi"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/mupi.webp" alt="ZEST - Mupi" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 8: mupi2 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/mupi2.webp", "alt":"ZEST - Mupi 2"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/mupi2.webp" alt="ZEST - Mupi 2" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 12: poster4 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/poster4.webp", "alt":"ZEST - Poster 4"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/poster4.webp" alt="ZEST - Poster 4" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 13: poster8 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/poster8.webp", "alt":"ZEST - Poster 8"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/poster8.webp" alt="ZEST - Poster 8" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 15: ticket -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/ticket.webp", "alt":"ZEST - Ticket"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/ticket.webp" alt="ZEST - Ticket" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+      <!-- Imagen 16: ticket2 -->
+      <div class="project-card" data-gallery='[
+        {"src":"../../../assets/img/Branding/ZEST/ticket2.webp", "alt":"ZEST - Ticket 2"}
+      ]'>
+        <img src="../../../assets/img/Branding/ZEST/ticket2.webp" alt="ZEST - Ticket 2" class="project-card-image"
+          loading="lazy" />
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../../../assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+
+    
+  </script>
+</body>
+
 </html>
