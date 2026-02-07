@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contacto con Javier Labaig - Diseñador gráfico disponible para proyectos" />
+    <title>Contact — Labaig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav-container">
+        <a href="../index.html" class="nav-link nav-logo">LABAIG</a>
+        <div class="nav-right">
+          <a href="about.html" class="nav-link">ABOUT</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu"></button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <nav class="mobile-menu">
+        <a href="../index.html" class="nav-link">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+    </div>
+
+    <main class="page-main contact-page">
+      <div class="container">
+        <div class="contact-content">
+          
+          <!-- Hero -->
+          <section class="contact-hero">
+            <h1 class="contact-title">Hablemos</h1>
+            <p class="contact-subtitle">Abierto a colaboraciones, proyectos y nuevas oportunidades</p>
+          </section>
+
+          <!-- Info de contacto -->
+          <section class="contact-info">
+            <div class="contact-methods">
+              
+              <div class="contact-item">
+                <h3 class="contact-label">Email</h3>
+                <a href="mailto:hola@javierlabaig.com" class="contact-link contact-email">
+                  javierlabaig@gmail.com
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <h3 class="contact-label">Ubicación</h3>
+                <p class="contact-text">Madrid, España</p>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Redes sociales -->
+          <section class="contact-social">
+            <h2 class="section-title">Redes</h2>
+            <div class="social-links">
+              
+              <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" class="social-link">
+                <span class="social-name">Instagram</span>
+                <span class="social-handle">@username</span>
+              </a>
+
+            </div>
+          </section>
+
+          <!-- Call to action
+          <section class="contact-cta">
+            <p class="cta-text">
+              Escríbeme y hablamos.
+            </p>
+            <a href="mailto:hola@javierlabaig.com" class="cta-button">
+              Enviar Email
+            </a>
+          </section> -->
+
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+  </script>
+  </body>
+</html>
