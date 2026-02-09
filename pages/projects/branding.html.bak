@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos de branding - Portfolio de Javier Labaig" />
+  <title>Labaig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+  <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="../../index.html" class="nav-link nav-logo">LABAIG</a>
+      <div class="nav-right">
+        <a href="../../pages/about.html" class="nav-link">ABOUT</a>
+        <a href="../../pages/contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <a href="../../index.html" class="nav-link">HOME</a>
+      <a href="../../pages/about.html" class="nav-link">ABOUT</a>
+      <a href="../../pages/contact.html" class="nav-link">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="projects-main">
+    <!-- Projects Grid -->
+    <div class="projects-grid projects-grid--single">
+
+      <!-- PROYECTO ARDE -->
+      <a href="branding/arde.html" class="project-card" data-slideshow="arde">
+        <div class="project-slideshow">
+          <div class="slide active">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770579693/Lightbox_z4wq6a.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770579693/Lightbox_z4wq6a.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770579693/Lightbox_z4wq6a.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770579693/Lightbox_z4wq6a.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770579693/Lightbox_z4wq6a.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770579693/Lightbox_z4wq6a.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770579693/Lightbox_z4wq6a.webp 2560w" sizes="100vw" alt="ARDE - Lightbox" class="project-card-image" loading="eager" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577471/poster2.1_tzmqij.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577471/poster2.1_tzmqij.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577471/poster2.1_tzmqij.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577471/poster2.1_tzmqij.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577471/poster2.1_tzmqij.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577471/poster2.1_tzmqij.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577471/poster2.1_tzmqij.webp 2560w" sizes="100vw" alt="ARDE - Poster 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577476/poster2.2_inj5tl.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577476/poster2.2_inj5tl.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577476/poster2.2_inj5tl.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577476/poster2.2_inj5tl.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577476/poster2.2_inj5tl.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577476/poster2.2_inj5tl.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577476/poster2.2_inj5tl.webp 2560w" sizes="100vw" alt="ARDE - Poster 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577471/poster2.3_p0oyxo.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577471/poster2.3_p0oyxo.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577471/poster2.3_p0oyxo.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577471/poster2.3_p0oyxo.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577471/poster2.3_p0oyxo.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577471/poster2.3_p0oyxo.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577471/poster2.3_p0oyxo.webp 2560w" sizes="100vw" alt="ARDE - Poster 3" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577472/poster2.4_wl8ekf.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577472/poster2.4_wl8ekf.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577472/poster2.4_wl8ekf.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577472/poster2.4_wl8ekf.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577472/poster2.4_wl8ekf.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577472/poster2.4_wl8ekf.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577472/poster2.4_wl8ekf.webp 2560w" sizes="100vw" alt="ARDE - Poster 4" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577470/posters1_mlb0ut.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577470/posters1_mlb0ut.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577470/posters1_mlb0ut.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577470/posters1_mlb0ut.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577470/posters1_mlb0ut.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577470/posters1_mlb0ut.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577470/posters1_mlb0ut.webp 2560w" sizes="100vw" alt="ARDE - Posters" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577472/tarjeta1_oqmiu9.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577472/tarjeta1_oqmiu9.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577472/tarjeta1_oqmiu9.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577472/tarjeta1_oqmiu9.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577472/tarjeta1_oqmiu9.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577472/tarjeta1_oqmiu9.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577472/tarjeta1_oqmiu9.webp 2560w" sizes="100vw" alt="ARDE - Tarjeta 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577469/tarjeta2_y1sbg7.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577469/tarjeta2_y1sbg7.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577469/tarjeta2_y1sbg7.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577469/tarjeta2_y1sbg7.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577469/tarjeta2_y1sbg7.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577469/tarjeta2_y1sbg7.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577469/tarjeta2_y1sbg7.webp 2560w" sizes="100vw" alt="ARDE - Tarjeta 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577463/web1.1_femzaz.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577463/web1.1_femzaz.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577463/web1.1_femzaz.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577463/web1.1_femzaz.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577463/web1.1_femzaz.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577463/web1.1_femzaz.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577463/web1.1_femzaz.webp 2560w" sizes="100vw" alt="ARDE - Web 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577464/web1.2_axd7tq.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577464/web1.2_axd7tq.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577464/web1.2_axd7tq.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577464/web1.2_axd7tq.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577464/web1.2_axd7tq.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577464/web1.2_axd7tq.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577464/web1.2_axd7tq.webp 2560w" sizes="100vw" alt="ARDE - Web 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770579758/mobile_hknqqs.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770579758/mobile_hknqqs.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770579758/mobile_hknqqs.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770579758/mobile_hknqqs.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770579758/mobile_hknqqs.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770579758/mobile_hknqqs.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770579758/mobile_hknqqs.webp 2560w" sizes="100vw" alt="ARDE - Mobile" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577465/letrerobyw_vytgnm.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577465/letrerobyw_vytgnm.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577465/letrerobyw_vytgnm.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577465/letrerobyw_vytgnm.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577465/letrerobyw_vytgnm.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577465/letrerobyw_vytgnm.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577465/letrerobyw_vytgnm.webp 2560w" sizes="100vw" alt="ARDE - Letrero" class="project-card-image" loading="lazy" />
+          </div>
+        </div>
+      </a>
+
+      <!-- PROYECTO ARDOSA -->
+      <a href="branding/ardosa.html" class="project-card" data-slideshow="ardosa">
+        <div class="project-slideshow">
+          <div class="slide active">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581177/mockup-vino3_nivukw.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581177/mockup-vino3_nivukw.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581177/mockup-vino3_nivukw.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581177/mockup-vino3_nivukw.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581177/mockup-vino3_nivukw.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581177/mockup-vino3_nivukw.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581177/mockup-vino3_nivukw.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Vino 3" class="project-card-image" loading="eager" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581170/mockup-vino1_bnol3o.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581170/mockup-vino1_bnol3o.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581170/mockup-vino1_bnol3o.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581170/mockup-vino1_bnol3o.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581170/mockup-vino1_bnol3o.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581170/mockup-vino1_bnol3o.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581170/mockup-vino1_bnol3o.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Vino 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581173/mockup-vino2_k0lkjy.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581173/mockup-vino2_k0lkjy.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581173/mockup-vino2_k0lkjy.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581173/mockup-vino2_k0lkjy.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581173/mockup-vino2_k0lkjy.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581173/mockup-vino2_k0lkjy.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581173/mockup-vino2_k0lkjy.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Vino 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581161/mockup_tortilla1_ukjkif.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581161/mockup_tortilla1_ukjkif.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581161/mockup_tortilla1_ukjkif.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581161/mockup_tortilla1_ukjkif.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581161/mockup_tortilla1_ukjkif.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581161/mockup_tortilla1_ukjkif.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581161/mockup_tortilla1_ukjkif.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Tortilla 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581168/mockup_tortillas2_r68cfr.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581168/mockup_tortillas2_r68cfr.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581168/mockup_tortillas2_r68cfr.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581168/mockup_tortillas2_r68cfr.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581168/mockup_tortillas2_r68cfr.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581168/mockup_tortillas2_r68cfr.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581168/mockup_tortillas2_r68cfr.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Tortilla 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581163/mockup_tortilla3_akgaay.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581163/mockup_tortilla3_akgaay.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581163/mockup_tortilla3_akgaay.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581163/mockup_tortilla3_akgaay.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581163/mockup_tortilla3_akgaay.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581163/mockup_tortilla3_akgaay.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581163/mockup_tortilla3_akgaay.webp 2560w" sizes="100vw" alt="Ardosa - Mockup Tortilla 3" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581158/botellin2-blanco_qbc3q3.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581158/botellin2-blanco_qbc3q3.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581158/botellin2-blanco_qbc3q3.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581158/botellin2-blanco_qbc3q3.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581158/botellin2-blanco_qbc3q3.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581158/botellin2-blanco_qbc3q3.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581158/botellin2-blanco_qbc3q3.webp 2560w" sizes="100vw" alt="Ardosa - Botellín Blanco" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581159/botellin2-negro_dulh6w.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581159/botellin2-negro_dulh6w.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581159/botellin2-negro_dulh6w.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581159/botellin2-negro_dulh6w.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581159/botellin2-negro_dulh6w.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581159/botellin2-negro_dulh6w.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581159/botellin2-negro_dulh6w.webp 2560w" sizes="100vw" alt="Ardosa - Botellín Negro" class="project-card-image" loading="lazy" />
+          </div>
+        </div>
+      </a>
+
+      <!-- PROYECTO ZEST -->
+      <a href="branding/zest.html" class="project-card" data-slideshow="zest">
+        <div class="project-slideshow">
+          <div class="slide active">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581321/book1_stbl09.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581321/book1_stbl09.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581321/book1_stbl09.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581321/book1_stbl09.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581321/book1_stbl09.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581321/book1_stbl09.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581321/book1_stbl09.webp 2560w" sizes="100vw" alt="ZEST - Book 1" class="project-card-image" loading="eager" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581323/book2_tgaoct.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581323/book2_tgaoct.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581323/book2_tgaoct.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581323/book2_tgaoct.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581323/book2_tgaoct.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581323/book2_tgaoct.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581323/book2_tgaoct.webp 2560w" sizes="100vw" alt="ZEST - Book 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581324/cup_oi8wlp.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581324/cup_oi8wlp.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581324/cup_oi8wlp.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581324/cup_oi8wlp.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581324/cup_oi8wlp.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581324/cup_oi8wlp.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581324/cup_oi8wlp.webp 2560w" sizes="100vw" alt="ZEST - Cup" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581327/cup1_pevrst.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581327/cup1_pevrst.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581327/cup1_pevrst.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581327/cup1_pevrst.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581327/cup1_pevrst.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581327/cup1_pevrst.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581327/cup1_pevrst.webp 2560w" sizes="100vw" alt="ZEST - Cup 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581329/cup2_jicxsr.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581329/cup2_jicxsr.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581329/cup2_jicxsr.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581329/cup2_jicxsr.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581329/cup2_jicxsr.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581329/cup2_jicxsr.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581329/cup2_jicxsr.webp 2560w" sizes="100vw" alt="ZEST - Cup 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581331/cup3_wbhw5h.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581331/cup3_wbhw5h.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581331/cup3_wbhw5h.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581331/cup3_wbhw5h.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581331/cup3_wbhw5h.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581331/cup3_wbhw5h.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581331/cup3_wbhw5h.webp 2560w" sizes="100vw" alt="ZEST - Cup 3" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581346/mupi_menya1.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581346/mupi_menya1.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581346/mupi_menya1.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581346/mupi_menya1.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581346/mupi_menya1.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581346/mupi_menya1.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581346/mupi_menya1.webp 2560w" sizes="100vw" alt="ZEST - Mupi" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581347/mupi2_sdnfrj.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581347/mupi2_sdnfrj.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581347/mupi2_sdnfrj.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581347/mupi2_sdnfrj.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581347/mupi2_sdnfrj.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581347/mupi2_sdnfrj.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581347/mupi2_sdnfrj.webp 2560w" sizes="100vw" alt="ZEST - Mupi 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581343/mupi3_ha2l4d.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581343/mupi3_ha2l4d.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581343/mupi3_ha2l4d.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581343/mupi3_ha2l4d.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581343/mupi3_ha2l4d.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581343/mupi3_ha2l4d.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581343/mupi3_ha2l4d.webp 2560w" sizes="100vw" alt="ZEST - Mupi 3" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581295/poster1_fhiftf.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581295/poster1_fhiftf.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581295/poster1_fhiftf.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581295/poster1_fhiftf.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581295/poster1_fhiftf.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581295/poster1_fhiftf.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581295/poster1_fhiftf.webp 2560w" sizes="100vw" alt="ZEST - Poster 1" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581299/poster2_qdldbw.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581299/poster2_qdldbw.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581299/poster2_qdldbw.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581299/poster2_qdldbw.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581299/poster2_qdldbw.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581299/poster2_qdldbw.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581299/poster2_qdldbw.webp 2560w" sizes="100vw" alt="ZEST - Poster 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581300/poster3_ofz7kz.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581300/poster3_ofz7kz.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581300/poster3_ofz7kz.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581300/poster3_ofz7kz.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581300/poster3_ofz7kz.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581300/poster3_ofz7kz.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581300/poster3_ofz7kz.webp 2560w" sizes="100vw" alt="ZEST - Poster 3" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581297/poster4_p4g96u.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581297/poster4_p4g96u.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581297/poster4_p4g96u.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581297/poster4_p4g96u.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581297/poster4_p4g96u.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581297/poster4_p4g96u.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581297/poster4_p4g96u.webp 2560w" sizes="100vw" alt="ZEST - Poster 4" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581302/poster5_vb6ved.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581302/poster5_vb6ved.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581302/poster5_vb6ved.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581302/poster5_vb6ved.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581302/poster5_vb6ved.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581302/poster5_vb6ved.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581302/poster5_vb6ved.webp 2560w" sizes="100vw" alt="ZEST - Poster 5" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581304/poster6_wvd4b8.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581304/poster6_wvd4b8.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581304/poster6_wvd4b8.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581304/poster6_wvd4b8.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581304/poster6_wvd4b8.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581304/poster6_wvd4b8.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581304/poster6_wvd4b8.webp 2560w" sizes="100vw" alt="ZEST - Poster 6" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581307/poster7_prvdb2.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581307/poster7_prvdb2.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581307/poster7_prvdb2.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581307/poster7_prvdb2.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581307/poster7_prvdb2.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581307/poster7_prvdb2.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581307/poster7_prvdb2.webp 2560w" sizes="100vw" alt="ZEST - Poster 7" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581309/poster8_clqluv.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581309/poster8_clqluv.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581309/poster8_clqluv.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581309/poster8_clqluv.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581309/poster8_clqluv.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581309/poster8_clqluv.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581309/poster8_clqluv.webp 2560w" sizes="100vw" alt="ZEST - Poster 8" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581316/ticket_o3f6kz.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581316/ticket_o3f6kz.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581316/ticket_o3f6kz.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581316/ticket_o3f6kz.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581316/ticket_o3f6kz.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581316/ticket_o3f6kz.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581316/ticket_o3f6kz.webp 2560w" sizes="100vw" alt="ZEST - Ticket" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581318/ticket2_btu7pv.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581318/ticket2_btu7pv.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581318/ticket2_btu7pv.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581318/ticket2_btu7pv.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581318/ticket2_btu7pv.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581318/ticket2_btu7pv.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581318/ticket2_btu7pv.webp 2560w" sizes="100vw" alt="ZEST - Ticket 2" class="project-card-image" loading="lazy" />
+          </div>
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581334/Logo1_cakgc0.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581334/Logo1_cakgc0.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581334/Logo1_cakgc0.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581334/Logo1_cakgc0.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581334/Logo1_cakgc0.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581334/Logo1_cakgc0.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581334/Logo1_cakgc0.webp 2560w" sizes="100vw" alt="ZEST - Logo 3" class="project-card-image" loading="lazy" />
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+
+    // Project slideshows
+    document.querySelectorAll('[data-slideshow]').forEach(slideshowContainer => {
+      const slides = slideshowContainer.querySelectorAll('.slide');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      
+      // Change slide every 3 seconds
+      setInterval(nextSlide, 3000);
+      
+      // Initialize first slide
+      if (slides.length > 0) {
+        showSlide(0);
+      }
+    });
+  </script>
+</body>
+
+</html>

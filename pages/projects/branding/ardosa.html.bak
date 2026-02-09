@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos de branding - Portfolio de Javier Labaig" />
+  <title>Labaig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+  <link rel="icon" href="../../../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="../../../index.html" class="nav-link nav-logo">LABAIG</a>
+      <div class="nav-right">
+        <a href="../../../pages/about.html" class="nav-link">ABOUT</a>
+        <a href="../../../pages/contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <a href="../../../index.html" class="nav-link">HOME</a>
+      <a href="../../../pages/about.html" class="nav-link">ABOUT</a>
+      <a href="../../../pages/contact.html" class="nav-link">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="projects-main">
+    <!-- Project Header and Intro Container -->
+    <div class="project-header-intro">
+      <!-- Project Header -->
+      <div class="project-header">
+        <h1 class="project-title">ARDOSA</h1>
+      </div>
+
+      <!-- Project Intro -->
+      <div class="project-intro">
+        <p class="project-text">
+          ARDOSA es la identidad visual para unos de los bares más míticos de Madrid: LA BODEGA DE LA ARDOSA. Se ha
+          rediseñado el logotipo, las etiquetas de sus botellas de cerveza y vino, así como diversos elementos gráficos
+          para su comunicación tanto en formato físico como digital. El objetivo principal ha sido mantener la esencia
+          tradicional del bar, al mismo tiempo que se le da un toque moderno y fresco que atraiga a una audiencia más
+          joven.
+        </p>
+      </div>
+    </div>
+
+    <!-- Projects Grid (2 columnas) -->
+    <div class="projects-grid projects-grid--two">
+
+      <!-- Imagen 1: mockup-vino3 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581177/mockup-vino3_nivukw.webp", "alt":"ARDOSA - Mockup Vino 3"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581177/mockup-vino3_nivukw.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581177/mockup-vino3_nivukw.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581177/mockup-vino3_nivukw.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581177/mockup-vino3_nivukw.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581177/mockup-vino3_nivukw.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581177/mockup-vino3_nivukw.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581177/mockup-vino3_nivukw.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Vino 3"
+          class="project-card-image" loading="eager" />
+      </div>
+
+      <!-- Imagen 2: mockup-vino1 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581170/mockup-vino1_bnol3o.webp", "alt":"ARDOSA - Mockup Vino 1"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581170/mockup-vino1_bnol3o.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581170/mockup-vino1_bnol3o.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581170/mockup-vino1_bnol3o.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581170/mockup-vino1_bnol3o.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581170/mockup-vino1_bnol3o.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581170/mockup-vino1_bnol3o.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581170/mockup-vino1_bnol3o.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Vino 1"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 3: mockup-vino2 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581173/mockup-vino2_k0lkjy.webp", "alt":"ARDOSA - Mockup Vino 2"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581173/mockup-vino2_k0lkjy.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581173/mockup-vino2_k0lkjy.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581173/mockup-vino2_k0lkjy.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581173/mockup-vino2_k0lkjy.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581173/mockup-vino2_k0lkjy.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581173/mockup-vino2_k0lkjy.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581173/mockup-vino2_k0lkjy.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Vino 2"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 4: mockup_tortilla1 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581161/mockup_tortilla1_ukjkif.webp", "alt":"ARDOSA - Mockup Tortilla 1"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581161/mockup_tortilla1_ukjkif.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581161/mockup_tortilla1_ukjkif.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581161/mockup_tortilla1_ukjkif.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581161/mockup_tortilla1_ukjkif.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581161/mockup_tortilla1_ukjkif.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581161/mockup_tortilla1_ukjkif.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581161/mockup_tortilla1_ukjkif.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Tortilla 1"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 5: mockup_tortillas2 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581168/mockup_tortillas2_r68cfr.webp", "alt":"ARDOSA - Mockup Tortilla 2"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581168/mockup_tortillas2_r68cfr.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581168/mockup_tortillas2_r68cfr.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581168/mockup_tortillas2_r68cfr.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581168/mockup_tortillas2_r68cfr.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581168/mockup_tortillas2_r68cfr.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581168/mockup_tortillas2_r68cfr.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581168/mockup_tortillas2_r68cfr.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Tortilla 2"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 6: mockup_tortilla3 -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581163/mockup_tortilla3_akgaay.webp", "alt":"ARDOSA - Mockup Tortilla 3"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581163/mockup_tortilla3_akgaay.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581163/mockup_tortilla3_akgaay.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581163/mockup_tortilla3_akgaay.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581163/mockup_tortilla3_akgaay.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581163/mockup_tortilla3_akgaay.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581163/mockup_tortilla3_akgaay.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581163/mockup_tortilla3_akgaay.webp 2560w" sizes="100vw" alt="ARDOSA - Mockup Tortilla 3"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 7: botellin2-blanco -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581158/botellin2-blanco_qbc3q3.webp", "alt":"ARDOSA - Botellín Blanco"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581158/botellin2-blanco_qbc3q3.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581158/botellin2-blanco_qbc3q3.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581158/botellin2-blanco_qbc3q3.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581158/botellin2-blanco_qbc3q3.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581158/botellin2-blanco_qbc3q3.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581158/botellin2-blanco_qbc3q3.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581158/botellin2-blanco_qbc3q3.webp 2560w" sizes="100vw" alt="ARDOSA - Botellín Blanco"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+      <!-- Imagen 8: botellin2-negro -->
+      <div class="project-card" data-gallery='[
+        {"src":"https://res.cloudinary.com/dpryibk5t/image/upload/v1770581155/botellin2-negro_zqjv0g.webp", "alt":"ARDOSA - Botellín Negro"}
+      ]'>
+        <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581159/botellin2-negro_dulh6w.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581159/botellin2-negro_dulh6w.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581159/botellin2-negro_dulh6w.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581159/botellin2-negro_dulh6w.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581159/botellin2-negro_dulh6w.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581159/botellin2-negro_dulh6w.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581159/botellin2-negro_dulh6w.webp 2560w" sizes="100vw" alt="ARDOSA - Botellín Negro"
+          class="project-card-image" loading="lazy" />
+      </div>
+
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../../../assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

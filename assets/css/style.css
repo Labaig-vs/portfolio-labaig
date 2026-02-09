@@ -56,6 +56,7 @@ video {
   padding: 1.5rem 2rem;
   background-color: transparent;
   pointer-events: none;
+  mix-blend-mode: difference
 }
 
 .nav-container {
@@ -168,8 +169,82 @@ video {
 }
 
 /* ===================================
-   COLUMN STYLES CON SLIDESHOW
+   NAVIGATION BUTTON
    =================================== */
+
+.nav-back-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-back-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.nav-back-button::before {
+  content: '←';
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-back-button::after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-back-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .nav-back-button::before {
+    font-size: 1rem;
+  }
+  
+  .nav-back-button::after {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .nav-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+  }
+  
+  .nav-back-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: none;
+  }
+}
 .column {
   position: relative;
   display: flex;
@@ -180,8 +255,14 @@ video {
   height: 100vh;
 }
 
+.column span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .column-branding {
   justify-content: flex-start;
+
 }
 
 .column-editorial {
@@ -237,12 +318,18 @@ video {
   height: 100vh;
   object-fit: cover;
   object-position: center;
-  transition: filter 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
-.column:hover .column-image,
-.column:hover .column-video {
-  filter: invert(1);
+.column:hover .column-slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.column:not(:hover) .column-slide.active {
+  transform: scale(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .column-text {
@@ -303,6 +390,7 @@ video {
   gap: 0;
   width: 100%;
 }
+
 .projects-grid--two {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -339,61 +427,134 @@ video {
 /* ===================================
    LIGHTBOX
    =================================== */
+
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  display: flex;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  z-index: 2000;
+  display: none;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease;
+  /* Cursor por defecto: cerrar (X) */
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>") 16 16, pointer;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
 }
 
 .lightbox-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  cursor: default;
+  z-index: 2001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 
-.lightbox::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.lightbox-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+.lightbox-image,
+.lightbox-video {
+  max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+  user-select: none;
+  opacity: 1;
+  transform: scale(1);
+  transition: none;
+  pointer-events: auto;
+  /* Por defecto sin cursor, se aplicará dinámicamente según la zona */
+  cursor: default;
 }
 
-.lightbox-close {
+/* Cursores personalizados para las mitades de la imagen */
+.lightbox-image.cursor-left,
+.lightbox-video.cursor-left {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5'><path d='M19 12H5M12 19l-7-7 7-7'/></svg>") 20 20, w-resize;
+}
+
+.lightbox-image.cursor-right,
+.lightbox-video.cursor-right {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg>") 20 20, e-resize;
+}
+
+/* Si solo hay una imagen, cursor de cerrar */
+.lightbox[data-single-image="true"] .lightbox-image,
+.lightbox[data-single-image="true"] .lightbox-video {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>") 16 16, pointer;
+}
+
+.lightbox.active .lightbox-image,
+.lightbox.active .lightbox-video {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Indicadores de posición del lightbox */
+.lightbox-indicators {
   position: absolute;
-  top: -40px;
-  right: 0;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  transition: opacity 0.3s ease;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  max-width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.lightbox-close:hover {
-  opacity: 0.7;
+.lightbox-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tamaños según cantidad de imágenes */
+/* 1-5 imágenes: normal (8px) */
+.lightbox-indicators[data-size="normal"] .lightbox-indicator {
+  width: 8px;
+  height: 8px;
+}
+
+/* 6-15 imágenes: mediano (6px) */
+.lightbox-indicators[data-size="medium"] {
+  gap: 6px;
+}
+
+.lightbox-indicators[data-size="medium"] .lightbox-indicator {
+  width: 6px;
+  height: 6px;
+}
+
+/* 16+ imágenes: pequeño (4px) */
+.lightbox-indicators[data-size="small"] {
+  gap: 4px;
+}
+
+.lightbox-indicators[data-size="small"] .lightbox-indicator {
+  width: 4px;
+  height: 4px;
+}
+
+.lightbox-indicator.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.lightbox-indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* ===================================
@@ -542,104 +703,6 @@ video {
 }
 
 /* ===================================
-   LIGHTBOX GALLERY (Actualizado)
-   =================================== */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  z-index: 2000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease;
-  /* Cursor por defecto: cerrar */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>") 16 16, zoom-out;
-}
-
-.lightbox.active {
-  display: flex;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(60px);
-}
-
-.lightbox-content {
-  position: relative;
-  z-index: 2001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  /* Permite que el click pase a las zonas de flechas */
-}
-
-.lightbox-image,
-.lightbox-video {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  user-select: none;
-  opacity: 1;
-  transform: scale(1);
-  transition: none;
-  pointer-events: auto;
-  /* La imagen sí es interactiva para cerrarla */
-}
-
-.lightbox.active .lightbox-image,
-.lightbox.active .lightbox-video {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* --- ZONAS DE INTERACCIÓN (FLECHAS INVISIBLES) --- */
-.lightbox-arrow {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 50vw;
-  height: 100vh;
-  background: transparent;
-  border: none;
-  z-index: 2010;
-  /* Por encima de la imagen */
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.lightbox-arrow-left {
-  left: 0;
-  /* Cursor Flecha Izquierda */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5'><path d='M19 12H5M12 19l-7-7 7-7'/></svg>") 20 20, w-resize;
-}
-
-.lightbox-arrow-right {
-  right: 0;
-  /* Cursor Flecha Derecha */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg>") 20 20, e-resize;
-}
-
-/* Lógica para cuando no hay más fotos:
-   Ocultamos la zona de clic para que el cursor pase al fondo (lightbox) 
-   y el clic ejecute el cierre. */
-.lightbox-arrow:disabled {
-  display: none;
-}
-
-/* Ajustes para móviles: ocultamos cursores personalizados */
-@media (hover: none) {
-  .lightbox-arrow-left,
-  .lightbox-arrow-right {
-    cursor: pointer;
-  }
-}
-
-/* ===================================
    PROJECT DETAIL PAGE
    =================================== */
 .project-detail-main {
@@ -732,7 +795,7 @@ video {
   padding-bottom: 0rem;
 }
 
-.container-about{
+.container-about {
   max-width: 100vw;
   margin: 1.5rem 1.5rem;
   text-align: left;
@@ -784,7 +847,7 @@ video {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
-  
+
 }
 
 .section-title {
@@ -1096,7 +1159,7 @@ video {
   .menu-toggle {
     display: block;
     font-size: 1.2rem;
-    padding: 1.8rem;
+    padding: 2rem;
   }
 
   .nav-right {
@@ -1182,19 +1245,6 @@ video {
     grid-template-columns: 1fr;
   }
 
-  .lightbox-arrow {
-    width: 60px;
-    height: 60px;
-  }
-
-  .lightbox-arrow-left {
-    left: 1rem;
-  }
-
-  .lightbox-arrow-right {
-    right: 1rem;
-  }
-
   /* Project detail */
   .project-detail-main {
     padding-top: 6rem;
@@ -1232,7 +1282,8 @@ video {
 
   /* Skills se colocan entre bio y formación en móvil */
   .about-skills {
-    order: 0; /* Mantiene el orden natural */
+    order: 0;
+    /* Mantiene el orden natural */
   }
 
   .skills-columns {
@@ -1277,6 +1328,8 @@ video {
     justify-content: space-between;
   }
 
+
+
   .nav-link {
     font-size: 0.75rem;
     padding-bottom: 1px;
@@ -1287,23 +1340,42 @@ video {
     font-size: 1rem;
   }
 
-  .column-text {
-    font-size: 0.6rem;
+  /* Mix blend mode solo para index */
+  .index-page .menu-toggle {
+    mix-blend-mode: difference;
+  }
+
+  .column-branding .column-text {
+    font-size: 0.8rem;
+    mix-blend-mode: normal;
+    padding: 0;
+  }
+
+  .column-editorial .column-text {
+    font-size: 0.8rem;
+  }
+
+  .column-archive .column-text {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+
+  .column-branding {
+    justify-content: center;
+
+  }
+
+  .column-editorial {
+    justify-content: center;
+  }
+
+  .column-archive {
+    justify-content: center;
   }
 
   .projects-title,
   .project-detail-title {
     font-size: 2rem;
-  }
-
-  .lightbox-arrow {
-    width: 50px;
-    height: 50px;
-  }
-
-  .lightbox-arrow::before {
-    width: 20px;
-    height: 20px;
   }
 
   .page-main {
@@ -1367,6 +1439,7 @@ video {
    ACCESSIBILITY & PERFORMANCE
    =================================== */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1397,6 +1470,6 @@ video {
 
   .column-slide {
     opacity: 0.3;
-    
+
   }
 }

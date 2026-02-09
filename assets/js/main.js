@@ -1,6 +1,6 @@
 /**
  * LABAIG PORTFOLIO - Lightbox Gallery System
- * Galería con navegación por flechas
+ * Galería con navegación por flechas en cursor dinámico
  */
 
 (function() {
@@ -17,6 +17,8 @@
       this.images = [];
       this.isOpen = false;
       this.clickedElement = null;
+      this.touchStartX = 0;
+      this.touchEndX = 0;
       this.init();
     }
 
@@ -32,15 +34,13 @@
     }
 
     createLightbox() {
-      // Crear HTML del lightbox
+      // Crear HTML del lightbox (SIN botones de navegación)
       const lightboxHTML = `
         <div class="lightbox" id="lightbox">
-          <button class="lightbox-arrow lightbox-arrow-left" id="lightbox-prev" aria-label="Anterior"></button>
           <div class="lightbox-content" id="lightbox-content">
             <img src="" alt="" class="lightbox-image" id="lightbox-image" style="display: none;" />
             <video class="lightbox-video" id="lightbox-video" style="display: none;" controls></video>
           </div>
-          <button class="lightbox-arrow lightbox-arrow-right" id="lightbox-next" aria-label="Siguiente"></button>
         </div>
       `;
 
@@ -51,35 +51,109 @@
       this.lightboxImage = document.getElementById('lightbox-image');
       this.lightboxVideo = document.getElementById('lightbox-video');
       this.lightboxContent = document.getElementById('lightbox-content');
-      this.prevBtn = document.getElementById('lightbox-prev');
-      this.nextBtn = document.getElementById('lightbox-next');
 
-      // Event listeners
-      this.prevBtn.addEventListener('click', () => this.prev());
-      this.nextBtn.addEventListener('click', () => this.next());
-      
-      // Cerrar al hacer click en el fondo (no en la imagen/video)
+      // Cerrar al hacer click en el fondo del lightbox
       this.lightbox.addEventListener('click', (e) => {
-        // Si click en la imagen/video, no cerrar
-        if (e.target === this.lightboxImage || e.target === this.lightboxVideo) {
-          return;
-        }
-        
-        // Si click en las flechas, no cerrar (ya tienen sus listeners)
-        if (e.target.closest('.lightbox-arrow')) {
-          return;
-        }
-        
-        // Si click en el contenedor de la imagen, no cerrar
-        if (e.target === this.lightboxContent) {
-          return;
-        }
-        
-        // Si click en cualquier otro lado del lightbox → cerrar
+        // Si click directamente en el lightbox (fondo), cerrar
         if (e.target === this.lightbox) {
           this.close();
         }
       });
+
+      // Click en la imagen/video para navegación
+      this.lightboxImage.addEventListener('click', (e) => {
+        this.handleImageClick(e);
+      });
+
+      this.lightboxVideo.addEventListener('click', (e) => {
+        this.handleImageClick(e);
+      });
+
+      // Cambiar cursor según posición del mouse
+      this.lightboxImage.addEventListener('mousemove', (e) => {
+        this.updateCursor(e, this.lightboxImage);
+      });
+
+      this.lightboxVideo.addEventListener('mousemove', (e) => {
+        this.updateCursor(e, this.lightboxVideo);
+      });
+
+      // Touch events para swipe en móvil
+      this.lightboxImage.addEventListener('touchstart', (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      this.lightboxImage.addEventListener('touchend', (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+      }, { passive: true });
+
+      this.lightboxVideo.addEventListener('touchstart', (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      this.lightboxVideo.addEventListener('touchend', (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+      }, { passive: true });
+    }
+
+    updateCursor(e, element) {
+      // Si solo hay una imagen, no cambiar el cursor
+      if (this.images.length === 1) {
+        return;
+      }
+
+      // Determinar si mouse está en mitad izquierda o derecha
+      const rect = element.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const middleX = rect.width / 2;
+
+      // Remover clases anteriores
+      element.classList.remove('cursor-left', 'cursor-right');
+
+      // Añadir clase según posición
+      if (mouseX < middleX) {
+        element.classList.add('cursor-left');
+      } else {
+        element.classList.add('cursor-right');
+      }
+    }
+
+    handleImageClick(e) {
+      // Si solo hay una imagen, cerrar
+      if (this.images.length === 1) {
+        this.close();
+        return;
+      }
+
+      // Determinar si click en mitad izquierda o derecha
+      const rect = e.target.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const middleX = rect.width / 2;
+
+      if (clickX < middleX) {
+        // Click en mitad izquierda
+        this.prev();
+      } else {
+        // Click en mitad derecha
+        this.next();
+      }
+    }
+
+    handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = this.touchStartX - this.touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe izquierda → siguiente
+          this.next();
+        } else {
+          // Swipe derecha → anterior
+          this.prev();
+        }
+      }
     }
 
     attachCardListeners() {
@@ -100,7 +174,7 @@
       this.currentIndex = startIndex;
       this.isOpen = true;
       
-      // Indicar si solo hay una imagen (ocultar flechas)
+      // Indicar si solo hay una imagen
       if (this.images.length === 1) {
         this.lightbox.setAttribute('data-single-image', 'true');
       } else {
@@ -122,7 +196,7 @@
         this.lightbox.classList.add('active');
       });
       
-      this.updateButtons();
+      this.updateIndicators();
     }
 
     close() {
@@ -143,11 +217,25 @@
       this.lightboxVideo.pause();
       this.lightboxVideo.src = '';
       this.clickedElement = null;
+
+      // Limpiar clases de cursor
+      this.lightboxImage.classList.remove('cursor-left', 'cursor-right');
+      this.lightboxVideo.classList.remove('cursor-left', 'cursor-right');
+
+      // Limpiar indicadores
+      if (this.indicators) {
+        this.indicators.remove();
+        this.indicators = null;
+      }
     }
 
     loadImage(index) {
       const item = this.images[index];
       const isVideo = this.isVideoFile(item.src);
+
+      // Limpiar clases de cursor antes de cambiar imagen
+      this.lightboxImage.classList.remove('cursor-left', 'cursor-right');
+      this.lightboxVideo.classList.remove('cursor-left', 'cursor-right');
 
       if (isVideo) {
         // Mostrar video
@@ -185,7 +273,7 @@
       if (this.currentIndex < this.images.length - 1) {
         this.currentIndex++;
         this.loadImage(this.currentIndex);
-        this.updateButtons();
+        this.updateIndicators();
       }
     }
 
@@ -193,24 +281,61 @@
       if (this.currentIndex > 0) {
         this.currentIndex--;
         this.loadImage(this.currentIndex);
-        this.updateButtons();
+        this.updateIndicators();
       }
     }
 
-    updateButtons() {
-      // Deshabilitar botón izquierdo al inicio
-      if (this.currentIndex === 0) {
-        this.prevBtn.disabled = true;
-      } else {
-        this.prevBtn.disabled = false;
+    updateIndicators() {
+      // Crear indicadores si no existen
+      if (!this.indicators) {
+        this.createIndicators();
       }
 
-      // Deshabilitar botón derecho al final
-      if (this.currentIndex === this.images.length - 1) {
-        this.nextBtn.disabled = true;
+      // Actualizar estado de los indicadores
+      const indicators = this.indicators.querySelectorAll('.lightbox-indicator');
+      indicators.forEach((indicator, index) => {
+        if (index === this.currentIndex) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    }
+
+    createIndicators() {
+      // Crear contenedor de indicadores
+      const indicatorsContainer = document.createElement('div');
+      indicatorsContainer.className = 'lightbox-indicators';
+      
+      // Determinar tamaño según cantidad de imágenes
+      const totalImages = this.images.length;
+      if (totalImages >= 16) {
+        indicatorsContainer.setAttribute('data-size', 'small');
+      } else if (totalImages >= 6) {
+        indicatorsContainer.setAttribute('data-size', 'medium');
       } else {
-        this.nextBtn.disabled = false;
+        indicatorsContainer.setAttribute('data-size', 'normal');
       }
+      
+      // Crear un indicador por cada imagen
+      this.images.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.className = 'lightbox-indicator';
+        indicator.setAttribute('data-index', index);
+        
+        // Añadir evento click para navegar directamente
+        indicator.addEventListener('click', () => {
+          this.currentIndex = index;
+          this.loadImage(index);
+          this.updateIndicators();
+        });
+        
+        indicatorsContainer.appendChild(indicator);
+      });
+      
+      // Insertar indicadores en el lightbox
+      this.lightbox.appendChild(indicatorsContainer);
+      this.indicators = indicatorsContainer;
     }
 
     handleKeyboard(e) {
@@ -263,18 +388,21 @@
       const videoCards = document.querySelectorAll('.project-card-video');
       
       videoCards.forEach(video => {
-        const card = video.closest('.project-card');
+        // Reproducir videos automáticamente sin necesidad de hover
+        video.play().catch(e => console.log('Autoplay prevented:', e));
         
-        if (card) {
-          card.addEventListener('mouseenter', () => {
-            video.play().catch(e => console.log('Autoplay prevented:', e));
+        // Opcional: pausar cuando sale de la vista
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+              video.pause();
+            }
           });
-
-          card.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-          });
-        }
+        });
+        
+        observer.observe(video.closest('.project-card'));
       });
     }
   }
@@ -434,8 +562,75 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('loaded');
+      
+      // Optimizar URLs de Cloudinary
+      CloudinaryOptimizer.optimizeAll();
     });
   };
+
+  // ===================================
+  // CLOUDINARY URL OPTIMIZER
+  // ===================================
+  
+  class CloudinaryOptimizer {
+    static optimizeImage(url) {
+      // Optimizar URLs de imágenes con q_auto:best,f_auto para máxima calidad
+      if (url.includes('cloudinary.com') && url.includes('/image/')) {
+        return url.replace(
+          /\/upload\//,
+          '/upload/q_auto:best,f_auto/'
+        );
+      }
+      return url;
+    }
+    
+    static optimizeVideo(url) {
+      // Optimizar URLs de videos con q_auto:best,vc_auto para máxima calidad
+      if (url.includes('cloudinary.com') && url.includes('/video/')) {
+        return url.replace(
+          /\/upload\//,
+          '/upload/q_auto:best,vc_auto/'
+        );
+      }
+      return url;
+    }
+    
+    static optimizeAll() {
+      // Optimizar todas las imágenes y videos del documento
+      const images = document.querySelectorAll('img[src*="cloudinary.com"]');
+      const videos = document.querySelectorAll('video[src*="cloudinary.com"]');
+      
+      // Optimizar imágenes
+      images.forEach(img => {
+        const originalSrc = img.src;
+        img.src = this.optimizeImage(originalSrc);
+        
+        // También optimizar srcset si existe
+        if (img.srcset) {
+          img.srcset = img.srcset.replace(/\/upload\//g, '/upload/q_auto,f_auto/');
+        }
+      });
+      
+      // Optimizar videos
+      videos.forEach(video => {
+        const originalSrc = video.src;
+        video.src = this.optimizeVideo(originalSrc);
+      });
+      
+      // Optimizar URLs en data-gallery
+      const galleryElements = document.querySelectorAll('[data-gallery]');
+      galleryElements.forEach(element => {
+        const galleryData = JSON.parse(element.getAttribute('data-gallery'));
+        const optimizedGallery = galleryData.map(item => {
+          if (item.src && item.src.includes('cloudinary.com')) {
+            item.src = this.optimizeImage(item.src);
+          }
+          return item;
+        });
+        element.setAttribute('data-gallery', JSON.stringify(optimizedGallery));
+      });
+    }
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

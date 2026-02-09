@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de diseño gráfico de Labaig - Branding, Editorial y proyectos creativos" />
+  <title>Labaig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="index-page">
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="./" class="nav-link nav-logo">LABAIG</a>
+      <div class="nav-right">
+        <a href="pages/about.html" class="nav-link">ABOUT</a>
+        <a href="pages/contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <a href="./" class="nav-link">HOME</a>
+      <a href="pages/about.html" class="nav-link">ABOUT</a>
+      <a href="pages/contact.html" class="nav-link">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="home-main">
+    <div class="columns-container">
+      <!-- COLUMNA BRANDING con imagen fija -->
+      <!-- <a href="pages/projects/branding.html" class="column column-branding" data-slideshow="branding"> -->
+      <a href="pages/projects/branding.html" class="column column-branding">
+        <div class="column-bg">
+          <!-- <div class="column-slide active"> -->
+          <div class="column-slide active">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770581173/mockup-vino2_k0lkjy.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770581173/mockup-vino2_k0lkjy.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770581173/mockup-vino2_k0lkjy.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770581173/mockup-vino2_k0lkjy.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770581173/mockup-vino2_k0lkjy.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770581173/mockup-vino2_k0lkjy.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770581173/mockup-vino2_k0lkjy.webp 2560w" sizes="100vw" alt="Proyecto de branding ARDE - Lightbox"
+              class="column-image" loading="eager" />
+          </div>
+          <!-- <div class="column-slide">
+              <img 
+                src="assets/img/Branding/Ardosa/mockup-vino3.webp" 
+                alt="Proyecto de branding Ardosa - Mockup vino" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Branding/ARDE/poster2.4.webp" 
+                alt="Proyecto de branding ARDE - Poster" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Branding/ZEST/book1.webp" 
+                alt="Proyecto de branding ZEST - Book" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Branding/ZEST/ticket.webp" 
+                alt="Proyecto de branding ZEST - Ticket" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Branding/Ardosa/botellin2-blanco.webp" 
+                alt="Proyecto de branding Ardosa - Botellín" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div> -->
+        </div>
+        <span class="column-text">BRANDING</span>
+      </a>
+
+      <!-- COLUMNA EDITORIAL con imagen fija -->
+      <!-- <a href="pages/projects/editorial.html" class="column column-editorial" data-slideshow="editorial"> -->
+      <a href="pages/projects/editorial.html" class="column column-editorial">
+        <div class="column-bg">
+          <!-- <div class="column-slide active"> -->
+          <div class="column-slide active">
+            <img src="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto:best,f_auto/q_auto,f_auto/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp" srcset="https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_480/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 480w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_768/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 768w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1024/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 1024w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1440/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 1440w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_1920/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 1920w, https://res.cloudinary.com/dpryibk5t/image/upload/q_auto,f_auto/w_2560/v1770577416/Helvetica-revista_Javier-Labaig_DG3B_1_ajf0xp.webp 2560w" sizes="100vw"
+              alt="Proyecto editorial Revista Helvetica" class="column-image" loading="eager" />
+          </div>
+          <!-- <div class="column-slide">
+              <img 
+                src="assets/img/Editorial/Revista Times/Times-revista_Javier-Labaig_DG3B_1.webp" 
+                alt="Proyecto editorial Revista Times" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Editorial/Testigos/publicacion3.png" 
+                alt="Proyecto editorial Testigos - Publicación" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Editorial/Testigos/desplegable2.png" 
+                alt="Proyecto editorial Testigos - Desplegable" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Editorial/Infografías/Cartel final.webp" 
+                alt="Proyecto editorial Infografías - Cartel" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="column-slide">
+              <img 
+                src="assets/img/Editorial/Carteles/mad22-1.webp" 
+                alt="Proyecto editorial Carteles" 
+                class="column-image"
+                loading="lazy"
+              />
+            </div> -->
+        </div>
+        <span class="column-text">EDITORIAL</span>
+      </a>
+
+      <!-- COLUMNA ARCHIVE con video -->
+      <a href="pages/projects/archive.html" class="column column-archive">
+        <div class="column-bg">
+          <div class="column-slide active">
+            <video
+              src="https://res.cloudinary.com/dpryibk5t/video/upload/q_auto:best,vc_auto/q_auto,vc_auto/v1770577585/Video-CLUSTER-MEJORA_Javier-Labaig_DG4B_do6bks.mp4"
+              class="column-video" muted loop playsinline preload="auto"></video>
+          </div>
+        </div>
+        <span class="column-text">ARCHIVE</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

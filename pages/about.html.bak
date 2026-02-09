@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sobre Javier Labaig - Diseñador gráfico especializado en branding y diseño editorial" />
+  <title>Labaig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-link nav-logo">LABAIG</a>
+      <div class="nav-right">
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <a href="../index.html" class="nav-link">HOME</a>
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="page-main about-page">
+    <div class="container-about">
+      <!-- Título principal -->
+      <section class="about-hero">
+        <h1 class="about-title">JAVIER LABAIG</h1>
+      </section>
+
+      <div class="about-content">
+        <!-- Bio y Skills en grid -->
+        <div class="bio-skills-wrapper">
+          <!-- Bio principal -->
+          <section class="about-bio">
+            <p class="bio-text">
+              Soy diseñador gráfico especializado en identidad visual y diseño editorial. Trabajo en la creación de
+              sistemas visuales claros, coherentes y escalables que comunican con precisión y criterio estético. Mi
+              enfoque combina pensamiento crítico, rigor conceptual y atención al detalle para resolver problemas de
+              comunicación visual desde la estructura y no desde lo decorativo. Estoy acostumbrado a trabajar en
+              entornos colaborativos y multilingües, fruto de una formación desarrollada entre el italiano y el inglés,
+              con parte de mis estudios realizados en Inglaterra. Desarrollo identidades y piezas editoriales pensadas
+              para su uso real, tanto en soportes impresos como digitales, con especial cuidado por la tipografía, la
+              jerarquía y la consistencia del sistema.
+            </p>
+            
+          </section>
+
+          <!-- Skills a la derecha en desktop -->
+          <section class="about-skills">
+            <h2 class="section-title">Competencias</h2>
+            <div class="skills-columns">
+              <!-- Columna de Competencias Técnicas -->
+              <div class="skills-column">
+                <h3 class="skills-subtitle">Competencias Técnicas</h3>
+                <ul class="skills-list">
+                  <li>Sistemas Visuales</li>
+                  <li>Diseño editorial y maquetación</li>
+                  <li>Adobe Creative Suite</li>
+                  <li>Figma</li>
+                  <li>Programación web básica</li>
+                  <li>3D básico</li>
+                </ul>
+              </div>
+
+              <!-- Columna de Soft Skills -->
+              <div class="skills-column">
+                <h3 class="skills-subtitle">Soft Skills</h3>
+                <ul class="skills-list">
+                  <li>Pensamiento crítico</li>
+                  <li>Capacidad de análisis</li>
+                  <li>Trabajo en equipo</li>
+                  <li>Resolución de Problemas</li>
+                  <li>Aprendizaje rápido</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="about-education">
+          <h2 class="section-title">Formación</h2>
+          <div class="education-list">
+            <div class="education-item">
+              <p class="education-degree">Grado en Diseño Gráfico</p>
+              <p class="education-institution">Escuela Superior de Diseño de Madrid</p>
+              <p class="education-year">2022 — 2027</p>
+            </div>
+            <!-- <div class="education-item">
+              <p class="education-degree">Educación obligatoria con metodología de proyectos</p>
+              <p class="education-institution">Escuela IDEO</p>
+              <p class="education-year">2015 — 2022</p>
+            </div>
+            <div class="education-item">
+              <p class="education-degree">Educación obligatoria</p>
+              <p class="education-institution">Scuola Statale Italiana di Madrid</p>
+              <p class="education-year">2008 — 2015</p> -->
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <!-- Formación -->
+        
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenuOverlay.classList.toggle('active');
+    });
+
+    // Close menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
